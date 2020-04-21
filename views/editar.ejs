@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Editar
+    </title>
+    <%- include ('partials/head') %>
+
+</head>
+
+<body>
+    <%- include ('partials/navigation') %>
+
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-sm-4 offset-md-4">
+                    <div class="card animated flipInY">
+                        <div class="card-header bg-dark text-white text-center">
+                            <h3>Editar Video</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="/update/<%= data.id %>" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="Name" value="<%= data.Name%>" placeholder="Name" class="form-control" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Description" value="<%= data.Description%>" placeholder="Link ej. https://www.youtube.com/embed/djV11Xbc914" class="form-control">
+                                </div>
+                                <div class="form-group">
+
+                                <div class="form-group">
+                                <input type="text" name="Category" value="<%= data.Category%>" placeholder="Category" class="form-control">
+                            </div>
+                                <button type="submit" class="btn btn-primary">
+                Save change
+              </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</form>
+
+<br>
+
+<%- include ('partials/footer') -%>
+
+</html>

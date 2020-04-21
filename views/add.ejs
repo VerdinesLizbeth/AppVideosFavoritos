@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MIS VIDEOS FAVORITOS</title>
+    <%- include ('partials/head') -%>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <%- include ('partials/navigation'); -%>
+
+        <!-- MAIN CONTENT -->
+            <div class="container p-5">
+                <div class="row">
+                    <div class="col-sm-4 offset-md-4">
+                        <div class="card animated flipInY">
+                            <div class="card-header bg-dark text-white text-center">
+                                <h3>Add Video</h3>
+                            </div>
+                            <div class="card-body">
+                                <form action="/add" method="POST">
+                                    <div class="form-group">
+                                        <input type="text" name="Name"  placeholder="Name" class="form-control" autofocus>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="link" type="text" name="Description"  placeholder="Link Ej. https://www.youtube.com/embed/djV11Xbc914" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                <input type="text" name="Category" placeholder="Category" class="form-control">
+                            </div>
+                                    <button type="submit"  onclick="" class="btn btn-primary">
+                    ACEPTAR
+                  </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <br>
+
+    </br>
+        <div class="container-fluid" id="about">
+            <div class="row bg-dark text-white p-5 text-center">
+                <div class="col-sm-6">
+                    <i class="fab fa-youtube-square fa-10x"></i>
+                </div>
+                <div class="col-sm-6">
+                    <h3>My Favorite Videos</h3>
+                    <p>
+                        <span>This is a space for me to let me know what your favorite video is  .-.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <%- include ('partials/footer'); -%>
+
+            <!-- JAVASCRIPT CDNS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
